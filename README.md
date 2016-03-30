@@ -2,10 +2,12 @@
 Python scripts created to offer a routing SMS service
 
 The project has 3 python files:
-	1.- run.py :
-		initial script, starts a server listening on port 5000 for POST petitions, it recieves as params a string with the format [origin,dest]
-	2.- mapsConnector.py : 
-		File with a class called Maps that requires a GoogleMapsAPI, you can create your own [`https://developers.google.com/maps/web-services/`](here)* .This connector do GET requests and parses JSON responses into nice msgs
-	3.- mongoConnector.py :
-		File with a class called MongoConnector that connects to a local running MongoDB that uses the information from de MapatonDB in GeoJson format. [`https://github.com/LabPLC/MapatonAPI`](Go to MapatonAPI repo)* 
-	
+<dl>
+  <dt>run.py:</dt> 
+  <dd>initial script, starts a server listening on port 5000 for POST petitions, it recieves as params a string with the format <i>[origin,dest]</i>, if you send the right parameters then it returns de route, if no it returns an error</dd>
+  <dt>mapsConnector.py:</dt>
+  <dd>File with a class called Maps that requires a GoogleMapsAPI, you can create your own <a href="https://developers.google.com/maps/web-services/">here</a>  .This connector generates GET requests and parses JSON responses into nice msgs</dd>
+  <dt>mongoConnector.py:</dt>
+  <dd>File with a class called MongoConnector that connects to a local running MongoDB on default Mongo port that uses the information from de MapatonDB in GeoJson format.
+  <a href="https://github.com/LabPLC/MapatonAPI">Go to MapatonAPI repo</a></dd>
+</dl>
